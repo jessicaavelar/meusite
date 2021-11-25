@@ -57,6 +57,9 @@ def noticias_site():
     <h1> Notícias Yanomami </h1>
     <a href="/">Página Inicial</a> - <a href="/sobre">Sobre este site</a>
     <p>
-        noticias_ti
+        <b>Notícias do Território Yanomami:</b>
+    </p>
+    <p>
+        {noticias_ti}
     </p>
     """
