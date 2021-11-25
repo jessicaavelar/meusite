@@ -14,10 +14,10 @@ def noticias_site():
     noticias_ti = []
     for tag in tag_a:
         texto = tag.text
-        Ttitulo = texto.split("-")
+        titulo = texto.split("-")
         url = "https://terrasindigenas.org.br" + tag.attrs["href"]
         noticias_ti.append({
-            "dasta": titulo[0],
+            "data": titulo[0],
             "titulo": titulo[1],
             "link": url,
         })
