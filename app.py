@@ -61,6 +61,6 @@ def noticias():
         <b>Notícias do Território Yanomami:</b>
     </p>
     <p>
-        {noticias["link"]}
+        {noticias}
     </p>
     """
