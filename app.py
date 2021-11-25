@@ -17,11 +17,11 @@ def noticias_site():
         Ttitulo = texto.split("-")
         url = "https://terrasindigenas.org.br" + tag.attrs["href"]
         noticias_ti.append({
-            "Data": titulo[0],
-            "Título": titulo[1],
-            "Link": url,
+            "dasta": titulo[0],
+            "titulo": titulo[1],
+            "link": url,
         })
-    return Data, Título, Link
+    return data, titulo, link
 
 
 app = Flask(__name__)
@@ -52,7 +52,7 @@ def sobre():
 
 @app.route("/noticias-yanomami")
 def noticias():
-    Data, Título, Link = noticias_site()
+    data, titulo, link = noticias_site()
     
     return f"""
     <h1> Notícias Yanomami </h1>
@@ -61,6 +61,6 @@ def noticias():
         <b>Notícias do Território Yanomami:</b>
     </p>
     <p>
-        {Link}
+        {link}
     </p>
     """
