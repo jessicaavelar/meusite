@@ -6,6 +6,6 @@ app = Flask(__name__)
 def hello_world():
     return "<h1> Olá, <b>mundo</b>!</h1><p><b>:D</b></p>"
 
-@app.route("/sobre)
+@app.route("/sobre")
 def sobre():
     return "<h1>Sobre</h1> <p>Esse site foi criado por <b>Jéssica Avelar</b>.</p>"
