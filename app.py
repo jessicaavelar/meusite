@@ -5,8 +5,8 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return """
-        <h1>Olá, <b>mundo</b>!</h1>
-        <p><b>:D</b></p>
+        <h1>Olá, mundo!</h1>
+        <h2><b>:D</b></h2>
     """
 
 @app.route("/sobre")
