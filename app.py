@@ -21,7 +21,7 @@ def noticias_site():
             "Título": titulo[1],
             "Link": url,
         })
-    return noticiais_ti
+    return Data, Título, Link
 
 
 app = Flask(__name__)
@@ -51,8 +51,9 @@ def sobre():
     """
 
 @app.route("/noticias-yanomami")
-def noticias_site():
-    noticias_ti = noticias_site()
+def noticias():
+    Data, Título, Link = noticias_site()
+    
     return f"""
     <h1> Notícias Yanomami </h1>
     <a href="/">Página Inicial</a> - <a href="/sobre">Sobre este site</a>
@@ -60,6 +61,6 @@ def noticias_site():
         <b>Notícias do Território Yanomami:</b>
     </p>
     <p>
-        {noticias_ti["Link"]}
+        {Link}
     </p>
     """
