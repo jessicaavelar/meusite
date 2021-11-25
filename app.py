@@ -21,7 +21,7 @@ def noticias_site():
             "Título": titulo[1],
             "Link": url,
         })
-     return noticiais_ti
+    return noticiais_ti
 
 
 app = Flask(__name__)
@@ -60,6 +60,6 @@ def noticias_site():
         <b>Notícias do Território Yanomami:</b>
     </p>
     <p>
-        {noticias_ti}
+        {noticias_ti["Link"]}
     </p>
     """
