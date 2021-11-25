@@ -50,7 +50,7 @@ def sobre():
         </p>
     """
 
-@app.rout("/noticias-yanomami")
+@app.route("/noticias-yanomami")
 def noticias_site():
     noticiais_ti = noticias_site()
     return f"""
