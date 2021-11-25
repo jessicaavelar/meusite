@@ -52,7 +52,7 @@ def sobre():
 
 @app.route("/noticias-yanomami")
 def noticias_site():
-    noticiais_ti = noticias_site()
+    noticias_ti = noticias_site()
     return f"""
     <h1> Notícias Yanomami </h1>
     <a href="/">Página Inicial</a> - <a href="/sobre">Sobre este site</a>
