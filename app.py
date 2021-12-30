@@ -28,15 +28,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return """
-        <h1>
-            Olá, mundo!
-        </h1>
-        <a href="/noticias-yanomami">Notícias Yanomami</a> - <a href="/sobre">Sobre este site</a>
-        <h2>
-            <b>:D</b>
-        </h2>
-    """
+    arquivo = open("templates/home.html")
+    return arquivo.read()
 
 @app.route("/sobre")
 def sobre():
