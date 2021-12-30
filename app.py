@@ -33,15 +33,8 @@ def hello_world():
 
 @app.route("/sobre")
 def sobre():
-    return """
-        <h1>
-            Sobre
-        </h1>
-        <a href="/">Página Inicial</a> - <a href="/noticias-yanomami">Notícias Yanomami</a>
-        <p>
-            Este site foi criado por <b>Jéssica Avelar</b>.
-        </p>
-    """
+    arquivo = open("templates/sobre.html")
+    return arquivo.read()
 
 @app.route("/noticias-yanomami")
 def noticias():
