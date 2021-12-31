@@ -79,15 +79,7 @@ def covid_pr():
 
 @app.route("/noticias-yanomami")
 def noticias():
-    noticias = noticias_site()
-    
-    return f"""
-    <h1> Notícias Yanomami </h1>
-    <a href="/">Página Inicial</a> - <a href="/sobre">Sobre este site</a>
-    <p>
-        <b>Notícias do Território Yanomami:</b>
-    </p>
-    <p>
-        {noticias}
-    </p>
-    """
+    return render_template(
+        "yanomami.html",
+        noticias = noticias_site()
+    )
