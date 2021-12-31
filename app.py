@@ -25,7 +25,6 @@ def dados_covid_pr():
 
     return data, casos, obitos
     
-    
 def noticias_site():
     site = "https://terrasindigenas.org.br/noticias/4016/TI/500/1"
     r = requests.get(site)
