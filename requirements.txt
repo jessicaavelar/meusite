@@ -2,3 +2,6 @@ flask
 gunicorn
 requests
 beautifulsoup4
+csv
+datetime
+io
