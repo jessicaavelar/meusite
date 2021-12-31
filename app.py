@@ -1,3 +1,6 @@
+import csv
+import datetime
+import io
 import requests
 from bs4 import BeautifulSoup as bs
 from flask import Flask, render_template
