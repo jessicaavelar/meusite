@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title> Sobre </title>
-  </head>
-   <body>
-      <h1>
-        Sobre
-      </h1>
+{% extends 'base.html' %}
+
+{% block titulo %}Sobre{% endblock %}
+{% block cabecalho %}Sobre{% endblock %}
+{% block conteudo %}
       <p>
         Este é o meu primeiro site, criado por <b>Jéssica Avelar</b>.
       </p>
@@ -14,5 +10,4 @@
       <h2>
         <b>:D</b>
       </h2>
-  </body>
-</html>
+{% end block %}
