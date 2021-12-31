@@ -58,14 +58,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    arquivo = open("templates/home.html")
-    return arquivo.read()
+    return render_template("home.html")
 
 
 @app.route("/sobre")
 def sobre():
-    arquivo = open("templates/sobre.html")
-    return arquivo.read()
+    return render_template("sobre.html")
 
 
 @app.route("/covid-pr")
