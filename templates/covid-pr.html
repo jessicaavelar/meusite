@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title> COVID-19 PR </title>
-  </head>
-   <body>
-      <h1>
-        COVID-19: Dados sobre o Paraná
-      </h1>
+{% extends 'base.html' %}
+
+{% block titulo %}COVID-19 PR{% endblock %}
+{% block cabecalho %}COVID-19: Dados sobre o Paraná{% endblock %}
+{% block conteudo %}
         <p>
           <b> Casos </b>(em {{ data }}): {{ casos }}
         </p>
@@ -14,5 +10,4 @@
          <b> Óbitos </b>(em {{ data }}): {{ obitos }}
         </p>
       <a href="/">Página Inicial</a> - <a href="/covid-pr">COVID-19 PR</a> - <a href="/noticias-yanomami">Notícias Yanomami</a>
-  </body>
-</html>
+{% endblock %}
