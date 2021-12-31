@@ -79,7 +79,8 @@ def covid_pr():
 
 @app.route("/noticias-yanomami")
 def noticias():
+    not_ti = noticias_site()
     return render_template(
         "yanomami.html",
-        noticias = noticias_site()
+        noticias = not_ti
     )
