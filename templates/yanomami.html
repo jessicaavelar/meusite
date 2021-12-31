@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Notícias Yanomami{% endblock %}
+{% block cabecalho %}Notícias sobre o território Yanomami{% endblock %}
+{% block conteudo %}
+    <p>
+        {{ noticias }}
+    </p>
+
+    <a href="/">Página Inicial</a> - <a href="/sobre">Sobre este site</a>
+{% endblock %}
