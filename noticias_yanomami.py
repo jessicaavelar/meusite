@@ -1,6 +1,6 @@
-import csv
 import requests
 from bs4 import BeautifulSoup as bs 
+
 
 def noticias_site():
     site = "https://terrasindigenas.org.br/noticias/4016/TI/500/1"
