@@ -89,7 +89,7 @@ def noticias():
 from flask import request
 import requests
 
-app.route("/telegram", methods = ["POST"])
+@app.route("/telegram", methods = ["POST"])
 def telegram():
     token = "5004646901:AAGf8yJpBnWDIY-XvGKtCWh2Ib4vVxtFkLk"
     dados = request.json
@@ -97,6 +97,3 @@ def telegram():
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     requests.post(urle, data = mensagem)
     return "ok"
-    
-          
-          
