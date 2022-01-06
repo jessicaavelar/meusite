@@ -2,8 +2,9 @@ import csv
 import datetime
 import io
 import requests
+import os
 from bs4 import BeautifulSoup as bs
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 def dados_covid_pr():
@@ -86,9 +87,6 @@ def noticias():
     )
 
 
-from flask import request
-import requests
-
 @app.route("/telegram", methods = ["POST"])
 def telegram():
 
@@ -104,12 +102,10 @@ def telegram():
         resposta = f"As informações que tenho sobre COVID-19 são do estado do Paraná, em {data}: {casos} casos e {obitos} óbitos."
     else:
         resposta = "Oi, como vai? Não entendi."
-        
-    token = "5004646901:AAGf8yJpBnWDIY-XvGKtCWh2Ib4vVxtFkLk"
+    
+    token = os.environ["TELEGRAM_TOKEN"]
     mensagem = {"chat_id": chat_id, "text": resposta}
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     requests.post(url, data = mensagem)
     
     return "ok"
-
-
