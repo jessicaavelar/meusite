@@ -93,7 +93,7 @@ import requests
 def telegram():
 
     dados = request.json
-    chat_id: dados["message"]["chat"]["id"]
+    chat_id = dados["message"]["chat"]["id"]
     texto = dados["message"]["text"].lower()
     if texto in ["oi", "ola", "olá", "olar", "hello"]:
         resposta = "Olá, tudo bem?"
