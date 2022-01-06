@@ -96,7 +96,7 @@ def telegram():
     chat_id: dados["message"]["chat"]["id"]
     texto = dados["message"]["text"].lower()
     if texto in ["oi", "ola", "olá", "olar", "hello"]:
-        respota = "Olá, tudo bem?"
+        resposta = "Olá, tudo bem?"
     elif texto in ["buenas", "buenos", "bom dia", "boa tarde", "boa noite"]:
         resposta = texto
     else:
