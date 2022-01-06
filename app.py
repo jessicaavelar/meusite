@@ -99,6 +99,9 @@ def telegram():
         resposta = "Olá, tudo bem?"
     elif texto in ["buenas", "buenos", "bom dia", "boa tarde", "boa noite"]:
         resposta = texto
+    elif "covid" in text:
+        data, casos, obitos = dados_covid_pr()
+        resposta f"As informações que tenho sobre COVID-19 são do estado do Paraná para a data {data}: {casos} casos e {obitos} óbitos."
     else:
         resposta = "Oi, como vai? Não entendi."
         
