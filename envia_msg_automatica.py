@@ -3,7 +3,7 @@ import os
 from covid_pr import dados_covid_pr
 
 
-data, casos, obitos = dados_covid_pr
+data, casos, obitos = dados_covid_pr()
 
 token = os.environ["TELEGRAM_TOKEN"]
 url = f"https://api.telegram.org/bot{token}/sendMessage"
