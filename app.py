@@ -91,9 +91,22 @@ import requests
 
 @app.route("/telegram", methods = ["POST"])
 def telegram():
-    token = "5004646901:AAGf8yJpBnWDIY-XvGKtCWh2Ib4vVxtFkLk"
+
     dados = request.json
-    mensagem = {"chat_id": dados["message"]["chat"]["id"], "text": "Vai tomar no cu, Felipe!"}
+    chat_id: dados["message"]["chat"]["id"]
+    texto = dados["message"]["text"].lower()
+    if texto in ["oi", "ola", "olá", "olar", "hello"]:
+        respota = "Olá, tudo bem?"
+    elif text in ["buenas", "buenos", "bom dia", "boa tarde", "boa noite"]:
+        resposta = text
+    else:
+        resposta = "Oi, como vai? Não entendi."
+        
+    token = "5004646901:AAGf8yJpBnWDIY-XvGKtCWh2Ib4vVxtFkLk"
+    mensagem = {"chat_id": chat_id, "text": resposta}
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     requests.post(url, data = mensagem)
+    
     return "ok"
+
+
