@@ -97,8 +97,8 @@ def telegram():
     texto = dados["message"]["text"].lower()
     if texto in ["oi", "ola", "olá", "olar", "hello"]:
         respota = "Olá, tudo bem?"
-    elif text in ["buenas", "buenos", "bom dia", "boa tarde", "boa noite"]:
-        resposta = text
+    elif texto in ["buenas", "buenos", "bom dia", "boa tarde", "boa noite"]:
+        resposta = texto
     else:
         resposta = "Oi, como vai? Não entendi."
         
